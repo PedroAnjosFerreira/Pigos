@@ -1,0 +1,3 @@
+if !placed{
+	placed = true
+}
