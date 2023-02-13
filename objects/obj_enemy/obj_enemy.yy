@@ -6,7 +6,7 @@
     "name": "spr_enemy",
     "path": "sprites/spr_enemy/spr_enemy.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,

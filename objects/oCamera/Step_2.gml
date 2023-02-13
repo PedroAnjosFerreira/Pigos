@@ -24,15 +24,15 @@ if mouse_check_button(mb_middle){
 	    camera_x -= 3;
 	}
 	else if (mouse_x > _dead_zone_end_x){
-		show_debug_message("Right")
+
 	    camera_x += 3;
 	}
 	if (mouse_y < _dead_zone_start_y){
-		show_debug_message("Up")
+
 	    camera_y -= 3;
 	}
 	else if (mouse_y > _dead_zone_end_y){
-		show_debug_message("Down")
+
 	    camera_y += 3;
 	}
 }
@@ -61,7 +61,7 @@ camera_y = clamp(camera_y, 0, room_height);
 
 global.cameraWidth = clamp(global.cameraWidth, global.cameraWidth, room_width/4 )
 global.cameraHeight = clamp(global.cameraHeight, global.cameraHeight, room_height/4 )
-show_debug_message(global.cameraWidth)
+
 
 
 mouse_x_previous = device_mouse_x_to_gui(0)
