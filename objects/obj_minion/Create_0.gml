@@ -1,9 +1,12 @@
-minion_speed = 0
-is_moving = false
-target_x = 0
-target_y = 0
-current_attack_rate = attack_rate
+/// @description Inserir descrição aqui
+// Você pode escrever seu código neste editor
 
 
-image_index = _frame
-image_speed = 0
+
+
+// Inherit the parent event
+event_inherited();
+
+sprite = spr_minion
+rotation = 0
+scale = 1

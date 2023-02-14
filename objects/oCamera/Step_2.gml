@@ -50,7 +50,7 @@ if wheel != 0 {
 	global.cameraWidth += add_width
 	global.cameraHeight += add_height
 	
-	if global.cameraWidth < room_width/4.5{
+	if global.cameraWidth < room_width/4{
 		camera_x -= add_width/2
 		camera_y -= add_height/2
 	}
@@ -59,8 +59,8 @@ if wheel != 0 {
 camera_x = clamp(camera_x, 0, room_width);
 camera_y = clamp(camera_y, 0, room_height);
 
-global.cameraWidth = clamp(global.cameraWidth, global.cameraWidth, room_width/4 )
-global.cameraHeight = clamp(global.cameraHeight, global.cameraHeight, room_height/4 )
+global.cameraWidth = clamp(global.cameraWidth, room_width/16, room_width/2 )
+global.cameraHeight = clamp(global.cameraHeight, room_height/16, room_height/2 )
 
 
 

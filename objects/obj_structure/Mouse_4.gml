@@ -1,3 +1,0 @@
-if !placed{
-	placed = true
-}

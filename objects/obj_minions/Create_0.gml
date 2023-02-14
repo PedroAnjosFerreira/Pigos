@@ -1,35 +1,24 @@
-function minion() constructor{
-	
-	_speed = 10
-	_frame = 0
-	_id = 1
-	attack_rate = 500
-	target_count = 1
-	range = 20
-	
-	function selected(_selected){
-		if _selected == true {
-			image_blend = c_aqua
-			array_push(global.selected_minions, self)
-		}else{
-			image_blend = c_white
-			
+minion_speed = 0
+is_moving = false
+target_x = 0
+target_y = 0
+current_attack_rate = attack_rate
+
+path = path_add()
+moving = false
+image_speed = 0
+
+if instance_exists(obj_structures) {
+	with (obj_structures) {
+		if other.class != accepted_minion {
+			mp_grid_add_instances(global.grid, self, true)
 		}
-	}
-	
-	function move(_x,_y) {
-		is_moving = true
-		target_x = _x
-		target_y = _y
-		minion_speed = _speed
 	}
 }
 
-function brown_minion() : minion() constructor{
-	_frame = 1
-	_speed = 5
-	_id = 2
-	attack_rate = 500
-	target_count = 2
-	range = 50
+function struct_created(_structure) {
+	if _structure.accepted_minion != class{
+		mp_grid_add_instances(global.grid, _structure, true)
+	}
+	path_start(path, 1, path_action_stop, false)
 }

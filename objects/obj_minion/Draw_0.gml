@@ -1,5 +1,13 @@
-draw_self()
+/// @description Inserir descrição aqui
+// Você pode escrever seu código neste editor
 
-draw_circle(x,y,range,1)
-draw_set_alpha(1)
-draw_text(x, y-60, current_attack_rate)
+
+
+
+// Inherit the parent event
+event_inherited();
+index = 0
+for (var _i = start_frame; _i < spr_number; _i++){
+	index ++
+	draw_sprite_ext(sprite, _i, x,y - index,scale,scale,rotation,image_blend,1)
+}
