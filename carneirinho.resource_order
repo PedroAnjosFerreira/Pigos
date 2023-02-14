@@ -19,6 +19,7 @@
     {"name":"Sprites","order":1,"path":"folders/Sprites.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+    {"name":"Ambient","order":9,"path":"folders/Sprites/Ambient.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"production_structures","order":1,"path":"scripts/production_structures/production_structures.yy",},
