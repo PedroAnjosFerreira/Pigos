@@ -2,7 +2,7 @@
 // You can write your code in this editor
 rotation += 1
 
-animator.scale += 0.1
+
 
 alarm[0]--
 // Check if the alarm has expired
