@@ -5,6 +5,7 @@ global.fullscreen = false
 camera_x = 0;
 camera_y = 0;
 
+
 // Window and Camera
 global.cameraWidth = cameraWidthConfig
 global.cameraHeight = cameraHeightConfig

@@ -9,6 +9,12 @@ function minion() constructor{
 	target_count = 1
 	range = 20
 	spr_number = 10
+	target_object = noone
+	callback = function(){}
+	inventory_slots = 2
+	inventory = array_create(0)
+	target_chest = noone
+	assigned = false
 	
 	function selected(_selected){
 		if _selected == true {
@@ -21,21 +27,43 @@ function minion() constructor{
 		}
 	}
 	
-	function move(_x,_y) {
+	function move(_x,_y, _callback_function) {
 		is_moving = true
 		target_x = _x
 		target_y = _y
 		minion_speed = _speed
-		rotation = point_direction(x, y, mouse_x, mouse_y) + 90;
+
 		
 		if mp_grid_path(global.grid, path, x, y, target_x, target_y, true){
 			path_start(path, 1, path_action_stop, false)
 		}
+		callback = _callback_function
+
+
 	}
 	
-	function pickup_item(){
+	function picked_item(_item){
+		array_push(inventory,_item)
+		if inventory_slots <= array_length(inventory) || ds_list_size(global.selected_items) <= 0{
+			target_chest = instance_nearest(x,y,obj_collector_chest)
+			move(target_chest.line_x, target_chest.line_y, function(){
 		
+				for(var _i = 0; _i < array_length(inventory);_i++){
+					target_chest.add(inventory[_i])
+					instance_destroy(inventory[_i])
+				}
+				inventory = array_create(0)
+			
+				if ds_list_size(global.selected_items) > 0 {
+					collect_nearest_item(self)
+				}
+			
+			})
+		}else {
+			collect_nearest_item(self)
+		}
 	}
+	
 }
 
 function brown_minion() : minion() constructor{

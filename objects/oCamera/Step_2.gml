@@ -23,8 +23,8 @@ if mouse_check_button(mb_middle){
 
 //Zooming
 var wheel = mouse_wheel_down() - mouse_wheel_up()
-show_debug_message(string(mouse_x_current))
-show_debug_message(global.cameraWidth/10)
+//show_debug_message(string(mouse_x_current))
+//show_debug_message(global.cameraWidth/10)
 
 if wheel != 0 {
 	var add_width = wheel * (cameraWidthConfig/5)

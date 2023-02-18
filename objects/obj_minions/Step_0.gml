@@ -14,3 +14,5 @@ if current_attack_rate <= 0{
 	current_attack_rate = attack_rate
 	
 }
+
+//if place_meeting(x + minion_speed, y, obj_structures)

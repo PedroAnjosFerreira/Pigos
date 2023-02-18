@@ -1,6 +1,18 @@
 // Os recursos de script mudaram para a v2.3.0; veja
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para obter mais informações
-function button() constructor {
-	x = global.cameraWidth - 10
-	y = global.cameraHeight - 10
+function pressed() {
+	show_debug_message("Pedro")
+	for (var _i = 0; _i < array_length(global.selected_units); _i++;){ 
+			var _selectable = global.selected_units[_i];
+			_selectable.selected(false)
+			_selectable.moving = false
+			global.selected_units = array_create(0)
+	}
+
+	if global.selection_type == obj_item {
+		global.selection_type = obj_minion
+	
+	}else{
+		global.selection_type = obj_item
+	}
 }
