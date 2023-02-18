@@ -19,7 +19,7 @@ lastx = x
 lasty = y
 
 
-sprite = spr_minion
+sprite = PIGO_BETA_IDLE_0
 rotation = 0
-scale = 1
+scale = 2
 

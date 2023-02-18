@@ -7,7 +7,11 @@
 // Inherit the parent event
 event_inherited();
 
-rotation = point_direction(lastx, lasty, x,y)+90;
+
+if(is_moving){
+	rotation = point_direction(lastx, lasty, x,y) + 90;
+}
+
 lastx = x
 lasty = y
  
