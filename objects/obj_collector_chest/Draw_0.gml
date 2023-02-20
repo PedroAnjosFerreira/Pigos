@@ -1,4 +1,9 @@
-draw_self()
+rotation += 0.5
+index = 0
+for (var _i = 0; _i < sprite_get_number(spr_chest); _i++){
+	index ++
+	draw_sprite_ext(sprite, _i, x,y - index,scale,scale,rotation,image_blend,1)
+}
 
 if mouse_entered {
 	draw_text(x, y-40, items_inside)

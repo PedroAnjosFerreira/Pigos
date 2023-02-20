@@ -4,4 +4,4 @@
 
 #macro GRID_START { x: 0, y: 0 }
 #macro GRID_SIZE 128
-#macro GRID_CELL_SIZE 16
+#macro GRID_CELL_SIZE 32

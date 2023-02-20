@@ -6,15 +6,15 @@
 
 // Inherit the parent event
 event_inherited();
-
-clicked = false
-
-function selected(__selected) {
-  if (__selected == true) {
-
-    upgrade_menu = instance_create_depth(x + 32, y - 32, 1, obj_upgrade_menu, {structure: self});
-    upgrade_menu.structure = id;
-  }else {
-	instance_destroy(obj_upgrade_menu)
-  }
+enum gui_state {
+    open,
+    closed
 }
+
+_x = 0
+_y = 0
+gui = gui_state.closed
+first_click = false
+clicked = false
+menu_clicked = false
+state = function(){}

@@ -5,23 +5,26 @@ function collect_nearest_item(_minion) {
 	
     var _nearest_object = noone;
     var _nearest_distance = -1;
-
-        for (var _j = 0; _j < _object_count; _j++) {
-            var _object = ds_list_find_value(global.selected_items, _j);
-            if (_object.assigned_to == noone) {
-                var _distance = point_distance(_minion.x, _minion.y, _object.x, _object.y);
-                if (_nearest_object == noone || _distance < _nearest_distance) {
-                    _nearest_object = _object;
-                    _nearest_distance = _distance;
-                }
+	
+    for (var _j = 0; _j < _object_count; _j++) {
+        var _object = ds_list_find_value(global.selected_items, _j);
+        if (_object.assigned_to == noone) {
+            var _distance = point_distance(_minion.x, _minion.y, _object.x, _object.y);
+            if (_nearest_object == noone || _distance < _nearest_distance) {
+                _nearest_object = _object;
+                _nearest_distance = _distance;
             }
         }
-
-        if (_nearest_object != noone) {
-            _nearest_object.assigned_to = _minion.id;
-            _minion.target_object = _nearest_object;
-            _minion.move(_minion.target_object.x, _minion.target_object.y);
-            ds_list_add(global.assigned_minions, _minion);
-            _minion.callback = function(){}
-        }
     }
+
+	if (_nearest_object != noone) {
+		_nearest_object.assigned_to = _minion.id;
+		ds_list_delete(global.selected_items,ds_list_find_index(global.selected_items, _nearest_object))
+		_minion.target_object = _nearest_object;
+		_minion.move(_minion.target_object.x, _minion.target_object.y);
+		ds_list_add(global.assigned_minions, _minion);
+		_minion.callback = function(){}
+	} else {
+		_minion.target_object = noone;
+	}
+}

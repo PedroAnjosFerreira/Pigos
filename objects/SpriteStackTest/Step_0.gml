@@ -19,4 +19,4 @@ if (alarm[0] <= 0) {
 	alarm[0] = delay;
 }
 
-show_debug_message(alarm[0])
+//show_debug_message(alarm[0])

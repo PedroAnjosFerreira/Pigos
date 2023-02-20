@@ -1,7 +1,7 @@
 // Os recursos de script mudaram para a v2.3.0; veja
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para obter mais informações
 function minion() constructor{
-	
+
 	_speed = 100
 	start_frame = 0
 	class = "Ranger"
@@ -11,39 +11,44 @@ function minion() constructor{
 	spr_number = 10
 	target_object = noone
 	callback = function(){}
-	inventory_slots = 2
+	inventory_slots = 4
 	inventory = array_create(0)
 	target_chest = noone
 	assigned = false
+	__selected = false
 	
 	function selected(_selected){
+		__selected = _selected
 		if _selected == true {
-			
+
 			image_blend = c_aqua
 			array_push(global.selected_units, self)
 		}else{
+
 			image_blend = c_white
 			
 		}
 	}
 	
-	function move(_x,_y, _callback_function) {
+	function move(_x,_y, _callback_function = function(){}, _target_object = noone) {
 		is_moving = true
 		target_x = _x
 		target_y = _y
 		minion_speed = _speed
-
+		state = walkingState
+		target_object = _target_object
 		
-		if mp_grid_path(global.grid, path, x, y, target_x, target_y, true){
+		if mp_grid_path(grid, path, x, y, target_x, target_y, true){
 			path_start(path, 1, path_action_stop, false)
 		}
 		callback = _callback_function
 
-
 	}
 	
 	function picked_item(_item){
+		
 		array_push(inventory,_item)
+		show_debug_message(ds_list_size(global.selected_items))
 		if inventory_slots <= array_length(inventory) || ds_list_size(global.selected_items) <= 0{
 			target_chest = instance_nearest(x,y,obj_collector_chest)
 			move(target_chest.line_x, target_chest.line_y, function(){
