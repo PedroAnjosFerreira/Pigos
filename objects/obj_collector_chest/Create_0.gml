@@ -15,7 +15,6 @@ function add(_item){
 	ds_list_add(items_inside,_item)
 }
 
-
 sprite = spr_chest
 rotation = 0
 scale = 1

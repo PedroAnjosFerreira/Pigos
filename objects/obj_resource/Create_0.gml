@@ -6,6 +6,8 @@ function selected(_true){
 		ds_list_add(global.selected_items, self)
 		image_blend = c_yellow
 	}else{
+		assigned_to = noone
 		image_blend = c_white
 	}
 }
+

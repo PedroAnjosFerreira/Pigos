@@ -1,3 +1,4 @@
+camera_activated = true
 // Configuration
 cameraWidthConfig = 640
 cameraHeightConfig = 360

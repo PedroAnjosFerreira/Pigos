@@ -17,26 +17,34 @@ function minion() constructor{
 	assigned = false
 	__selected = false
 	
-	function selected(_selected){
+	is_in_group = false
+	delete_timer = 0
+	text = ""
+	cont = 0
+	group = ""
+	
+	collection_rate = 250
+	
+	function selected(_selected, _all_no_group = true){
 		__selected = _selected
 		if _selected == true {
-
+			array_push(global.selected_units,self)
 			image_blend = c_aqua
-			array_push(global.selected_units, self)
 		}else{
-
 			image_blend = c_white
-			
+
 		}
 	}
 	
-	function move(_x,_y, _callback_function = function(){}, _target_object = noone) {
+	function move(_x,_y, _callback_function = function(){}, _target_object = noone){
+		walkingState()
+		state = walkingState
 		is_moving = true
 		target_x = _x
 		target_y = _y
 		minion_speed = _speed
-		state = walkingState
 		target_object = _target_object
+		
 		
 		if mp_grid_path(grid, path, x, y, target_x, target_y, true){
 			path_start(path, 1, path_action_stop, false)
