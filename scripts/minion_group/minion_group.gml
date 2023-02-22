@@ -129,7 +129,6 @@ function display_groups(){
 		draw_text(_button_x+(group_button_w*0.5),_button_y+(group_button_h*0.5),global.groups[_i].group_name)
 	
 		if mouse_check_button_pressed(mb_left) && point_in_rectangle(D_MOUSE_X, D_MOUSE_Y, _button_x, _button_y, _button_x+group_button_w, _button_y+group_button_h){
-			show_debug_message("PAU NO CU")
 			_on_click_on_group(_i)
 		}	
 	}

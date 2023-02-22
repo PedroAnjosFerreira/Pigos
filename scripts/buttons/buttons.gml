@@ -9,10 +9,10 @@ function pressed() {
 			global.selected_units = array_create(0)
 	}
 
-	if global.selection_type == obj_resource {
+	if global.selection_type == obj_items {
 		global.selection_type = obj_minion
 	
 	}else{
-		global.selection_type = obj_resource
+		global.selection_type = obj_items
 	}
 }

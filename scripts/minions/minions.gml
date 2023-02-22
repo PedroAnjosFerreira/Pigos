@@ -56,7 +56,6 @@ function minion() constructor{
 	function picked_item(_item){
 		
 		array_push(inventory,_item)
-		show_debug_message(ds_list_size(global.selected_items))
 		if inventory_slots <= array_length(inventory) || ds_list_size(global.selected_items) <= 0{
 			target_chest = instance_nearest(x,y,obj_collector_chest)
 			move(target_chest.line_x, target_chest.line_y, function(){

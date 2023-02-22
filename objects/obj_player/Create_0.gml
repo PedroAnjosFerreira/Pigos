@@ -55,8 +55,7 @@ function main_gui(){
 	
 	
 	if mouse_check_button_pressed(mb_left) && (point_in_rectangle(_mouse_x, _mouse_y, _selection_button_x, _selection_button_y, _selection_button_x+32, _selection_button_x+32)) {
-		global.selection_type = obj_resource
-		state = selecting_items
+		state = selecting_selection_types
 	}
 	if mouse_check_button_pressed(mb_left) && (point_in_rectangle(_mouse_x, _mouse_y, _group_button_x, _group_button_y, _group_button_x+16, _group_button_y+16)) {
 		_on_click_on_group = function(_i){
@@ -90,6 +89,10 @@ function selecting_items(){
 	if mouse_check_button_pressed(mb_left) && (point_in_rectangle(_mouse_x, _mouse_y, 640 - 32, 360 - 32, 640, 360)) {
 			global.selection_type = obj_minion
 			state = main_gui
+			for (var _i = 0; _i < ds_list_size(global.selected_items);_i++){
+				var _item = ds_list_find_value(global.selected_items,_i)
+				_item.selected(false)
+			}
 	}
 	
 	if mouse_check_button_pressed(mb_left) && (point_in_rectangle(_mouse_x, _mouse_y, 148, 360 - 32, 148 + 32, 360)) {
@@ -112,6 +115,25 @@ function selecting_items(){
 	}
 }
 
-_on_click_on_group = function(){}
+function selecting_selection_types(){
+	var _select_resources_button_x = 640/2-16*2
+	var _select_resources_button_y = 360-16
+	
+	var _select_items_button_x = 640/2-16
+	var _select_items_button_y = 360-16
+	
+	draw_sprite(spr_group,0,_select_resources_button_x,_select_resources_button_y)
+	draw_sprite(spr_group,0,_select_items_button_x,_select_items_button_y)
+	
+	if mouse_check_button_pressed(mb_left) && point_in_rectangle(D_MOUSE_X, D_MOUSE_Y, _select_resources_button_x, _select_resources_button_y, _select_items_button_x+16,_select_items_button_y+16){
+		global.selection_type = obj_items
+		state = selecting_items
+	}
+	if mouse_check_button_pressed(mb_left) && point_in_rectangle(D_MOUSE_X, D_MOUSE_Y, _select_items_button_x, _select_items_button_y, _select_items_button_x+16, _select_items_button_y+16){
+		global.selected_items = obj_resources
+		state = selecting_resources
+	}
+}
 
+_on_click_on_group = function(){}
 state = main_gui

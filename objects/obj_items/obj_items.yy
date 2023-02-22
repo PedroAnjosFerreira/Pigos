@@ -1,8 +1,11 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_resource",
-  "spriteId": null,
+  "name": "obj_items",
+  "spriteId": {
+    "name": "spr_item",
+    "path": "sprites/spr_item/spr_item.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
@@ -21,7 +24,11 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_minion","path":"objects/obj_minion/obj_minion.yy",},},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
