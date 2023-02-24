@@ -1,7 +1,6 @@
-/// @description Insert description here
-// You can write your code in this editor
 rotation += 1
 
+<<<<<<< Updated upstream
 
 
 alarm[0]--
@@ -20,3 +19,6 @@ if (alarm[0] <= 0) {
 }
 
 //show_debug_message(alarm[0])
+=======
+animator.step()
+>>>>>>> Stashed changes

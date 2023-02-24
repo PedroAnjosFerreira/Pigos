@@ -1,1 +1,1 @@
-animator._draw(x,y,rotation)
+animator.draw(x,y,rotation)

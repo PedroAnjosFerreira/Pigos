@@ -1,16 +1,17 @@
-sprite_idle = [PIGO_BETA_IDLE_0, PIGO_BETA_IDLE_1]
-sprite_walk = [PIGO_BETA_WALK_0, PIGO_BETA_WALK_1, PIGO_BETA_WALK_2]
+sprite_idle = [spr_pigo_beta_idle_0, spr_pigo_beta_idle_1]
+sprite_walk = [spr_pigo_beta_walk_0, spr_pigo_beta_walk_1, spr_pigp_beta_walk_2]
 sprite = [sprite_idle, sprite_walk]
 rotation = 0
 scale = 2
-delay = 5
 
-animator = new animation_player(sprite,mini_calca.WALK, scale, true)
-
-// Set the alarm to trigger in 60 steps (1 second)
-alarm[0] = delay;
-
-enum mini_calca{
+enum GENERIC_STATES{
 	IDLE,
 	WALK
 }
+
+anim_param = [
+	{ delay: 10, loop: true }, // IDLE
+	{ delay: 5, loop: true }   // WALK
+]
+
+animator = new AnimationPlayer(sprite,GENERIC_STATES.WALK, scale, anim_param)
