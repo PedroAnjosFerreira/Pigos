@@ -48,6 +48,7 @@
     {"name":"Sprite14","order":16,"path":"sprites/Sprite14/Sprite14.yy",},
     {"name":"obj_createTestMinion","order":1,"path":"objects/obj_createTestMinion/obj_createTestMinion.yy",},
     {"name":"obj_placables","order":3,"path":"objects/obj_placables/obj_placables.yy",},
+    {"name":"animation_parameters","order":8,"path":"scripts/animation_parameters/animation_parameters.yy",},
     {"name":"spr_wood_tower","order":3,"path":"sprites/spr_wood_tower/spr_wood_tower.yy",},
     {"name":"obj_belt","order":7,"path":"objects/obj_belt/obj_belt.yy",},
     {"name":"spr_enemy","order":4,"path":"sprites/spr_enemy/spr_enemy.yy",},

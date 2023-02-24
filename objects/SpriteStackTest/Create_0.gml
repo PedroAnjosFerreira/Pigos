@@ -10,8 +10,8 @@ enum GENERIC_STATES{
 }
 
 anim_param = [
-	{ delay: 10, loop: true }, // IDLE
-	{ delay: 5, loop: true }   // WALK
+	new AnimationParameters(10, true), // IDLE
+	new AnimationParameters(5, true)   // WALK
 ]
 
 animator = new AnimationPlayer(sprite,GENERIC_STATES.WALK, scale, anim_param)
