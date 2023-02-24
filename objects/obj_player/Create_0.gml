@@ -19,11 +19,7 @@ enum GUIState {
 global.GUI_state = GUIState.main
 
 
-<<<<<<< Updated upstream
 
-=======
-global.selected_units = []
->>>>>>> Stashed changes
 global.selection_type = obj_minion
 global.labor_minions = ds_list_create();
 global.selected_items = ds_list_create();

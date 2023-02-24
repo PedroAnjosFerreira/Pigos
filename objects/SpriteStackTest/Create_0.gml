@@ -1,5 +1,5 @@
 sprite_idle = [spr_pigo_beta_idle_0, spr_pigo_beta_idle_1]
-sprite_walk = [spr_pigo_beta_walk_0, spr_pigo_beta_walk_1, spr_pigp_beta_walk_2]
+sprite_walk = [spr_pigo_beta_walk_0, spr_pigo_beta_walk_1, spr_pigo_beta_walk_2]
 sprite = [sprite_idle, sprite_walk]
 rotation = 0
 scale = 2

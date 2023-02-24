@@ -46,4 +46,3 @@ function AnimationPlayer (_sprite_list, _state, _scale, _anim_param) constructor
 	
 
 }
-
