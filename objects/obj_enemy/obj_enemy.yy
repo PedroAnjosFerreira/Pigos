@@ -25,7 +25,12 @@
   "physicsRestitution": 0.1,
   "physicsSensor": false,
   "physicsShape": 1,
-  "physicsShapePoints": [],
+  "physicsShapePoints": [
+    {"x":0.0,"y":0.0,},
+    {"x":16.0,"y":0.0,},
+    {"x":16.0,"y":16.0,},
+    {"x":0.0,"y":16.0,},
+  ],
   "physicsStartAwake": true,
   "properties": [],
   "solid": true,
@@ -33,6 +38,9 @@
     "name": "spr_enemy",
     "path": "sprites/spr_enemy/spr_enemy.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_enemy_maks",
+    "path": "sprites/spr_enemy_maks/spr_enemy_maks.yy",
+  },
   "visible": true,
 }

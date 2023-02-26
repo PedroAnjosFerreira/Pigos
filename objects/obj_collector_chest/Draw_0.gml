@@ -1,8 +1,7 @@
 rotation += 0.5
-index = 0
+
 for (var _i = 0; _i < sprite_get_number(spr_chest); _i++){
-	index ++
-	draw_sprite_ext(sprite, _i, x,y - index,scale,scale,rotation,image_blend,1)
+	draw_sprite_ext(sprite, _i, x,y - _i,scale,scale,rotation,image_blend,1)
 }
 
 if mouse_entered {
@@ -11,23 +10,23 @@ if mouse_entered {
 	
 	
 	// Define the grid properties
-	var grid_x = x;
-	var grid_y = y + 64;
-	var cell_size = 32;
-	var columns = 4;
+	var _grid_x = x;
+	var _grid_y = y + 64;
+	var _cell_size = 32;
+	var _columns = 4;
 
 	// Loop through the items in the list and draw them in a grid
-	for (var i = 0; i < ds_list_size(items_inside); i++) {
+	for (var _i = 0; _i < ds_list_size(items_inside); _i++) {
 	    // Calculate the position of the current cell in the grid
-	    var row = floor(i / columns);
-	    var col = i mod columns;
-	    var cell_x = grid_x + col * cell_size;
-	    var cell_y = grid_y + row * cell_size;
+	    var _row = floor(_i / _columns);
+	    var _col = _i mod _columns;
+	    var _cell_x = _grid_x + _col * _cell_size;
+	    var _cell_y = _grid_y + _row * _cell_size;
     
 	    // Draw the item at the current cell position
-	    var item = ds_list_find_value(items_inside, i);
+	    var _item = ds_list_find_value(items_inside, _i);
 		if items_inside > 0 {
-			draw_sprite(item.sprite_index, item.image_index, cell_x, cell_y);
+			draw_sprite(_item.sprite_index, _item.image_index, _cell_x, _cell_y);
 		}
 	}
 }

@@ -3,10 +3,10 @@ first_click = !first_click
 show_debug_message(first_click)
 if placed {
 
-    if gui == gui_state.closed && first_click {
+    if gui == GUI_STATE.CLOSED && first_click {
 
-       gui = gui_state.open;
-       state = function openUpgradeMenu() {
+       gui = GUI_STATE.OPEN;
+       state = function open_upgrade_menu() {
 
 			var _mouse_x = device_mouse_x_to_gui(0);
 			var _mouse_y = device_mouse_y_to_gui(0);
@@ -18,14 +18,14 @@ if placed {
 				menu_clicked = true
 			}else if !clicked && !menu_clicked{
 				first_click = false
-		        gui = gui_state.closed;
+		        gui = GUI_STATE.CLOSED;
 				clicked = false
 				state = function () {};
 			}
         };
     } else {
         state = function () {};
-        gui = gui_state.closed;
+        gui = GUI_STATE.CLOSED;
 		clicked = false
     }
 }

@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Structures",
-    "path": "folders/Objects/Structures.yy",
+    "name": "Logistical Strutuctres",
+    "path": "folders/Objects/Structures/Logistical Strutuctres.yy",
   },
   "parentObjectId": null,
   "persistent": false,

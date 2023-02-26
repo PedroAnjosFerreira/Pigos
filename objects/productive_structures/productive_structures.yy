@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Minion Structures",
-    "path": "folders/Objects/Structures/Minion Structures.yy",
+    "name": "Pigo Structure Types",
+    "path": "folders/Objects/Structures/Pigo Structure Types.yy",
   },
   "parentObjectId": null,
   "persistent": false,

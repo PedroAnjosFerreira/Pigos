@@ -15,8 +15,8 @@ function create_minion_group_gui(){
 	var _add_to_group_button_x = 32
 	var _add_to_group_button_y = 0
 
-	draw_sprite(spr_group,0,_create_group_button_x,_create_group_button_y)
-	draw_sprite(spr_group,0,_add_to_group_button_x,_add_to_group_button_y)
+	draw_sprite(spr_create_group,0,_create_group_button_x,_create_group_button_y)
+	draw_sprite(spr_add_to_group,0,_add_to_group_button_x,_add_to_group_button_y)
 	
 	if mouse_check_button_pressed(mb_left) && (point_in_rectangle(_mouse_x, _mouse_y, _add_to_group_button_x, _add_to_group_button_y, _add_to_group_button_x+32, _add_to_group_button_y+16)) {
 			
@@ -47,6 +47,7 @@ function create_minion_group_gui(){
 	
 	if mouse_check_button_pressed(mb_left) && (point_in_rectangle(_mouse_x, _mouse_y, _create_group_button_x, _create_group_button_y, _create_group_button_x+16, _create_group_button_y+16)) {
 		state = function (){
+			show_debug_message("OII")
 			var _mouse_x = device_mouse_x_to_gui(0);
 			var _mouse_y = device_mouse_y_to_gui(0);
 	
@@ -133,3 +134,4 @@ function display_groups(){
 		}	
 	}
 }
+

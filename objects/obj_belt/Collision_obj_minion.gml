@@ -1,16 +1,16 @@
 
 if placed{
 	switch (belt_direction) {
-		case belt_directions.right:
+		case BELT_DIRECTIONS.RIGHT:
 		other.x += 1 * belt_speed;
 		break;
-		case belt_directions.left:
+		case BELT_DIRECTIONS.LEFT:
 		other.x -= 1 * belt_speed;
 		break;
-		case belt_directions.up:
+		case BELT_DIRECTIONS.UP:
 		other.y -= 1 * belt_speed;
 		break;
-		case belt_directions.down:
+		case BELT_DIRECTIONS.DOWN:
 		other.y += 1 * belt_speed;
 		break;
 	}

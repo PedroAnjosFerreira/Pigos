@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Structures",
-    "path": "folders/Objects/Structures.yy",
+    "name": "Structures Parents",
+    "path": "folders/Objects/Structures/Structures Parents.yy",
   },
   "parentObjectId": {
     "name": "obj_collidable",

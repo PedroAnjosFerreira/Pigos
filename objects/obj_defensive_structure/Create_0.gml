@@ -6,14 +6,14 @@
 
 // Inherit the parent event
 event_inherited();
-enum gui_state {
-    open,
-    closed
+enum GUI_STATE {
+    OPEN,
+    CLOSED
 }
 
 _x = 0
 _y = 0
-gui = gui_state.closed
+gui = GUI_STATE.CLOSED
 first_click = false
 clicked = false
 menu_clicked = false

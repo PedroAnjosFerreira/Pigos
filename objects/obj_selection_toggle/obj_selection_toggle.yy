@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_selection_button",
-    "path": "sprites/spr_selection_button/spr_selection_button.yy",
+    "name": "spr_selection_toggle_button",
+    "path": "sprites/spr_selection_toggle_button/spr_selection_toggle_button.yy",
   },
   "spriteMaskId": null,
   "visible": true,

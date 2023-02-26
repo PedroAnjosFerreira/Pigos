@@ -11,16 +11,9 @@ if _count > 0 {
 			}
 		}
 		state = create_minion_group_gui
-	}
-	if global.selection_type == obj_items{
+	}else{
 		for (var _i = 0; _i < _count; _i++){
 			_list[|_i].selected(true)
 		}
-		
-		state = selecting_items
 	}
 }
-
-
-
-ds_list_destroy(_list)

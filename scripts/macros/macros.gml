@@ -8,3 +8,18 @@
 
 #macro D_MOUSE_X device_mouse_x_to_gui(0)
 #macro D_MOUSE_Y device_mouse_y_to_gui(0)
+
+global.selected_items = []
+global.selected_resources = []
+global.assigned_minions = []
+global.selected_units = []
+global.all_no_group = true
+global.labor_minions = []
+global.groups = []
+global.selection_type = obj_minion
+
+enum MINION_MODES {
+	FREE,
+	DEFENSIVE,
+	PRODUCTIVE
+}

@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Logistical Strutuctres",
+    "path": "folders/Objects/Structures/Logistical Strutuctres.yy",
   },
   "parentObjectId": {
     "name": "obj_placables",
