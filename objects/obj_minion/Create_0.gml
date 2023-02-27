@@ -82,6 +82,7 @@ path_start(path, 1, path_action_stop, false)
 	
 		target_x = _x
 		target_y = _y
+		
 		target_object = _target_object
 		
 		if mp_grid_path(grid, path, x, y, target_x, target_y, true){
